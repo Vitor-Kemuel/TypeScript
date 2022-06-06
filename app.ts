@@ -1,16 +1,14 @@
-let valueAny: any
-valueAny = 3
-valueAny = "teste"
-valueAny = true
+type input = number | string
 
-let valueString01: string
-valueString01 = valueAny
-
-let valueString02: string
-valueString02 = valueString01
-
-function somarStrings(string01: string, string02: string){
-    console.log(string01 + string02)
+function somaValor(input01: input, input02: input) {
+    if(typeof input01 === "string" || typeof input02 === "string"){
+        return input01.toString() + input02.toString()
+    }else{
+        return input01 + input02
+    }
 }
 
-somarStrings(valueString01, valueString02)
+console.log(somaValor(17, 5))
+console.log(somaValor("Hello", ", how are you?"))
+console.log(somaValor("Saldo restante: ", 14))
+

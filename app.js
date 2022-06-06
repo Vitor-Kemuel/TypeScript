@@ -1,13 +1,12 @@
 "use strict";
-let valueAny;
-valueAny = 3;
-valueAny = "teste";
-valueAny = true;
-let valueString01;
-valueString01 = valueAny;
-let valueString02;
-valueString02 = valueString01;
-function somarStrings(string01, string02) {
-    console.log(string01 + string02);
+function somaValor(input01, input02) {
+    if (typeof input01 === "string" || typeof input02 === "string") {
+        return input01.toString() + input02.toString();
+    }
+    else {
+        return input01 + input02;
+    }
 }
-somarStrings(valueString01, valueString02);
+console.log(somaValor(17, 5));
+console.log(somaValor("Hello", ", how are you?"));
+console.log(somaValor("Saldo restante: ", 14));

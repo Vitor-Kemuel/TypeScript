@@ -4,7 +4,7 @@ let input02 = document.getElementById("input02") as HTMLInputElement;
 
 function soma(num01: number, num02: number, printar: boolean, frase: string) {
     let resultado = num01 + num02
-    if(printar){
+    if (printar) {
         console.log(frase + resultado)
     }
     return num01 + num02

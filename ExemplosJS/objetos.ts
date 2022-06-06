@@ -52,9 +52,9 @@ const pessoa06: Estudante = {
     materias: ["Desenvolvimento Web", "Banco de dados", "Segurança da informação"]
 }
 
-function listar (lista: string[]) {
-    for (const item of lista){
-        console.log("- "+ item)
+function listar(lista: string[]) {
+    for (const item of lista) {
+        console.log("- " + item)
     }
 }
 
