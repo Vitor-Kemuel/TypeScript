@@ -1,61 +1,16 @@
-const pessoa01 = {
-    nome: "Mariana",
-    idade: 19,
-    profissao: "desenvolvedora"
+let valueAny: any
+valueAny = 3
+valueAny = "teste"
+valueAny = true
+
+let valueString01: string
+valueString01 = valueAny
+
+let valueString02: string
+valueString02 = valueString01
+
+function somarStrings(string01: string, string02: string){
+    console.log(string01 + string02)
 }
 
-const pessoa02: { nome: string, idade: number, profissao: string } = {
-    nome: "Pedro",
-    idade: 21,
-    profissao: "Vendedor"
-}
-
-const pessoa03: { nome: string, idade: number, profissao: string } = {
-    nome: "Julia",
-    idade: 21,
-    profissao: "pintora"
-}
-
-enum Profissao {
-    Desenvolvedor,
-    Pintor,
-    Vendedor,
-    Professor
-}
-
-interface Pessoa {
-    nome: string,
-    idade: number,
-    profissao?: Profissao,
-}
-
-const pessoa04: Pessoa = {
-    nome: "José",
-    idade: 32,
-    profissao: Profissao.Professor
-}
-
-interface Estudante extends Pessoa {
-    materias: string[]
-}
-
-const pessoa05: Estudante = {
-    nome: "Monica",
-    idade: 25,
-    profissao: Profissao.Desenvolvedor,
-    materias: ["Desenvolvimento Web", "Banco de dados", "Segurança da informação"]
-}
-
-const pessoa06: Estudante = {
-    nome: "Eduardo",
-    idade: 20,
-    materias: ["Desenvolvimento Web", "Banco de dados", "Segurança da informação"]
-}
-
-function listar (lista: string[]) {
-    for (const item of lista){
-        console.log("- "+ item)
-    }
-}
-
-listar(pessoa06.materias)
+somarStrings(valueString01, valueString02)
