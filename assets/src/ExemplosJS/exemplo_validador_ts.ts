@@ -8,7 +8,6 @@ function soma(num01: number, num02: number, printar: boolean, frase: string) {
         console.log(frase + resultado)
     }
     return num01 + num02
-
 }
 
 let devePrintar = true

@@ -11,4 +11,3 @@ function somaValor(input01: input, input02: input) {
 console.log(somaValor(17, 5))
 console.log(somaValor("Hello", ", how are you?"))
 console.log(somaValor("Saldo restante: ", 14))
-
