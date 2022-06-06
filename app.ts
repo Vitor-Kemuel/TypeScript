@@ -1,10 +1,20 @@
-function somaCallback(num01: number, num02: number, callback: (number: number) => number): number {
-    let resultado = num01 + num02
-    return callback(resultado)
-}
+let any: any
+any = 3
+any = "teste"
+any = 5
 
-function aoQuadrado(number: number): number {
-    return number * number
-}
+let stringTeste01: string = "verificar"
+stringTeste01 = any
 
-console.log(somaCallback(1, 5, aoQuadrado))
+let unknow: unknown
+unknow = 3
+unknow = "teste"
+unknow = true
+unknow = "agora vai"
+
+let stringTeste02: string = "verificar"
+// stringTeste02 = unknow // <= erro
+
+if (typeof unknow === "string") {
+    stringTeste02 = unknow
+}
