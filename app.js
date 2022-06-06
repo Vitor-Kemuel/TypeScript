@@ -1,5 +1,9 @@
 "use strict";
-function somarComRetornoVoid(num01, num02) {
-    console.log(num01 + num02);
+function somaCallback(num01, num02, callback) {
+    let resultado = num01 + num02;
+    return callback(resultado);
 }
-somarComRetornoVoid(5, 10);
+function aoQuadrado(number) {
+    return number * number;
+}
+console.log(somaCallback(1, 5, aoQuadrado));
