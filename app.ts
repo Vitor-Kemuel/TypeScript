@@ -1,24 +1,61 @@
-let button = document.getElementById("button");
-let input01 = document.getElementById("input01") as HTMLInputElement;
-let input02 = document.getElementById("input02") as HTMLInputElement;
+const pessoa01 = {
+    nome: "Mariana",
+    idade: 19,
+    profissao: "desenvolvedora"
+}
 
-function soma(num01: number, num02: number, printar: boolean, frase: string) {
-    let resultado = num01 + num02
-    if(printar){
-        console.log(frase + resultado)
+const pessoa02: { nome: string, idade: number, profissao: string } = {
+    nome: "Pedro",
+    idade: 21,
+    profissao: "Vendedor"
+}
+
+const pessoa03: { nome: string, idade: number, profissao: string } = {
+    nome: "Julia",
+    idade: 21,
+    profissao: "pintora"
+}
+
+enum Profissao {
+    Desenvolvedor,
+    Pintor,
+    Vendedor,
+    Professor
+}
+
+interface Pessoa {
+    nome: string,
+    idade: number,
+    profissao?: Profissao,
+}
+
+const pessoa04: Pessoa = {
+    nome: "José",
+    idade: 32,
+    profissao: Profissao.Professor
+}
+
+interface Estudante extends Pessoa {
+    materias: string[]
+}
+
+const pessoa05: Estudante = {
+    nome: "Monica",
+    idade: 25,
+    profissao: Profissao.Desenvolvedor,
+    materias: ["Desenvolvimento Web", "Banco de dados", "Segurança da informação"]
+}
+
+const pessoa06: Estudante = {
+    nome: "Eduardo",
+    idade: 20,
+    materias: ["Desenvolvimento Web", "Banco de dados", "Segurança da informação"]
+}
+
+function listar (lista: string[]) {
+    for (const item of lista){
+        console.log("- "+ item)
     }
-    return num01 + num02
-
 }
 
-let devePrintar = true
-let frase: string
-frase = "O valor é: "
-
-if (button) {
-    button.addEventListener("click", () => {
-        if (input01 && input02) {
-            console.log(soma(Number(input01.value), Number(input02.value), devePrintar, frase))
-        }
-    })
-}
+listar(pessoa06.materias)
